@@ -32,6 +32,8 @@
           </p>
         </div>
 
+
+
         <div style="flex-grow: 1"></div>
 
         <!-- <div class="text-akad-tempat">Counting Down To The Big Day</div> -->
@@ -65,8 +67,17 @@
             </div>
           </div>
         </div>
+
+        <div class="open-invitation-button" @click="openMap()" data-aos="flip-right" data-aos-duration="2000">
+          <br>
+        <div class="text-map">KLIK LIHAT LOKASI</div>
+        </div>
+
       </div>
     </div>
+
+
+
   </div>
 </template>
 
@@ -80,6 +91,14 @@ export default Vue.extend({
       minuteCount: "",
       secondCount: "",
     };
+  },
+
+methods: {
+    openMap: function () {
+      window.open(
+        "https://goo.gl/maps/iKsvPLhbLX5HDjLJ6"
+      );
+    },
   },
 
   created() {
@@ -136,6 +155,7 @@ export default Vue.extend({
     }, 1000);
   },
 });
+
 </script>
 
 <style scoped>
@@ -158,6 +178,13 @@ export default Vue.extend({
 
 .text-akad {
   color: burlywood;
+  font-size: 30px;
+  font-family: "Canvas", sans-serif;
+  font-weight: bold;
+}
+
+.text-map {
+  color: white;
   font-size: 30px;
   font-family: "Canvas", sans-serif;
   font-weight: bold;
